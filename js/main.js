@@ -207,7 +207,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
     self.markers.push(marker);
   });
-} */
+}*/
 
 if('serviceWorker' in navigator){
   window.addEventListener("load", () => {
