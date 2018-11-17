@@ -192,3 +192,17 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+if('serviceWorker' in navigator){
+  window.addEventListener("load", () => {
+  navigator.serviceWorker.register('/RestaurantReviewsApp/sw.js')
+  .then((res) => {
+    console.log(res);
+  console.log( "Registration successful");
+})
+  .catch((err) => {
+    console.log(err);
+    console.log("Registration not successful");
+  })
+   });
+}
