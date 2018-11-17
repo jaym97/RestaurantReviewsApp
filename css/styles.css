@@ -290,6 +290,20 @@ nav h1 a {
   color: #666;
 }
 
+#top-btn {
+  border-radius: 50%;
+  padding: 30px;
+  background: rgba(255, 100, 00, 0.5);
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 @media all and (max-width: 750px){
 
   #restaurant-address {

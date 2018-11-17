@@ -222,3 +222,27 @@ if('serviceWorker' in navigator){
   })
    });
 }
+
+let scrollBtn = document.createElement('button');
+scrollBtn.setAttribute('id', 'top-btn');
+scrollBtn.setAttribute('onclick', 'topFunction()');
+scrollBtn.textContent = 'top';
+document.body.append(scrollBtn);
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+                      scrollFunction();
+                  };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
+        document.getElementById("top-btn").style.display = "block";
+    } else {
+        document.getElementById("top-btn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
