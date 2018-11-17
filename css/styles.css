@@ -273,3 +273,50 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+@media all and (max-width: 750px){
+
+  #restaurant-address {
+    font-size: 1.5em;
+  }
+
+  .filter-options {
+    width: 95%;
+    padding: 10px;
+  }
+  #restaurant-hours {
+    font-size: 1.5em;
+  }
+
+  .inside #footer {
+    width: 100%;
+  }
+
+  .inside #map-container {
+    height: 35%;
+    width: 100%;
+  }
+
+  #breadcrumb {
+    padding: 5px 35px 12px;
+    width: 100%;
+  }
+
+  .leaflet-touch .leaflet-control-layers,
+  .leaflet-touch .leaflet-bar {
+    top: 60px;
+  }
+
+  #restaurant-container{
+    padding: 350px 40px 30px;
+    width: 81%;
+  }
+
+  #reviews-container {
+    width: 90%;
+  }
+
+  #restaurants-list {
+    padding: 15px 0 15px;
+  }
+}
