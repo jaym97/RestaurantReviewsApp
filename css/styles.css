@@ -169,7 +169,7 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: orange;
+  color: #fff;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -332,5 +332,11 @@ nav h1 a {
 
   #restaurants-list {
     padding: 15px 0 15px;
+  }
+
+  .filter-options {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
   }
 }
