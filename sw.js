@@ -1,11 +1,5 @@
 var staticCacheName = 'RestRevApp1';
-
-
-self.addEventListener('install', function (event) {
-
-    event.waitUntil(
-        caches.open(staticCacheName).then(function (cache) {
-            return cache.addAll([
+var urlsToCache = [
                 '/RestaurantReviewsApp/',
                 '/RestaurantReviewsApp/js/dbhelper.js',
                 '/RestaurantReviewsApp/js/main.js',
@@ -27,8 +21,17 @@ self.addEventListener('install', function (event) {
                 '/RestaurantReviewsApp/restaurant.html',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
-              ]);
-        }).then(console.log('Cache is sucessful!'))
+              ];
+
+
+self.addEventListener('install', function (event) {
+
+    event.waitUntil(
+        caches.open(staticCacheName)
+        .then(function (cache) {
+          (console.log('Cache is sucessful!'));
+          return cache.addAll(urlsToCache);
+        })
     );
 });
 
