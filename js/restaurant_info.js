@@ -206,7 +206,7 @@ getParameterByName = (name, url) => {
 }
 
 if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js')
+  navigator.serviceWorker.register('./sw.js')
   .then(() => {
   console.log( "Registration successful");
 })
