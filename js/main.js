@@ -214,17 +214,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 }*/
 
 if('serviceWorker' in navigator){
-  window.addEventListener("load", () => {
-  navigator.serviceWorker.register('/RestaurantReviewsApp/sw.js')
-  .then((res) => {
-    console.log(res);
+  navigator.serviceWorker.register('/sw.js')
+  .then(() => {
   console.log( "Registration successful");
 })
-  .catch((err) => {
-    console.log(err);
+  .catch(() => {
     console.log("Registration not successful");
   })
-   });
 }
 
 let scrollBtn = document.createElement('button');
